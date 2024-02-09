@@ -1,0 +1,29 @@
+<div class="marginList">
+  <table mat-table [dataSource]="movies">  
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td id="elementName" mat-cell *matCellDef="let element">{{element.name}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="originalLanguage">
+          <th mat-header-cell *matHeaderCellDef> Original Language </th>
+          <td id="elementLanguage" mat-cell *matCellDef="let element"> {{element.originalLanguage}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="popularity">
+        <th mat-header-cell *matHeaderCellDef> Popularity </th>
+        <td id="elementPopularity" mat-cell *matCellDef="let element"> {{element.popularity}} </td>
+    </ng-container>
+
+      <ng-container matColumnDef="actions">
+      <th *matHeaderCellDef></th>
+      <td *matCellDef="let element;">
+              <button mat-icon-button (click)="navigateToDetails(element.id)">
+                  <mat-icon>launch</mat-icon>        
+              </button></td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

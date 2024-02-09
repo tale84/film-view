@@ -1,0 +1,26 @@
+<div class="centerDiv">
+    <form [formGroup]="moviesFilterForm">
+        <mat-card>
+            <mat-card-content>
+                <div class="flexDisplay">
+                    <div class="marginFilter">
+                        <mat-label class="marginFilter fontSizeLabelFilter">Choose a type:</mat-label>
+                        <select formControlName="type" class="selectFilter">
+                            <option value="movie">movie</option>
+                            <option value="tv">tv</option>
+                        </select>
+                    </div>
+
+                    <div class="marginFilter marginTopDiv">
+                        <mat-form-field>
+                            <mat-label for="name">Name:</mat-label>
+                            <input matInput formControlName="name">
+                        </mat-form-field>
+                    </div>
+
+                    <div><button mat-raised-button color="primary" (click)="onSubmit()">Search</button></div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </form>
+</div>

@@ -1,0 +1,3 @@
+<h1 class="centerDiv titleHome">{{ title }}</h1>
+<app-movies-filter (submitFilter)="onSearch($event)"></app-movies-filter>
+<app-movies-list *ngIf="movies.length > 0" [movies]="movies"></app-movies-list>

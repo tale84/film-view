@@ -1,0 +1,35 @@
+<div class="centerDiv marginTopDiv"><button mat-raised-button color="primary" (click)="returnToHome()">Return</button></div>
+<div class="detailDisplay">
+    <div><img src={{imageUrl}} alt=""/></div>
+    <div>
+        <mat-card class="cardDetail">
+            <mat-card-title class="cardTitle">{{ movie.name }}</mat-card-title>
+            <mat-card-content>
+                <div class="marginOverview">
+                    <mat-label class="labelContent">Overview : </mat-label>
+                    <div class="content">{{ movie.overview }}</div>
+                </div>
+                <div class="flexDisplay">
+                    <mat-label class="labelContent">Original language : </mat-label>
+                    <mat-chip>{{ movie.originalLanguage }}</mat-chip>
+                </div>
+                <div class="flexDisplay">
+                    <mat-label class="labelContent">Popularity : </mat-label>
+                    <div class="content">{{ movie.popularity }}</div>
+                </div>
+                <div class="flexDisplay">
+                    <mat-label class="labelContent">Vote average : </mat-label>
+                    <div class="content"class="content">{{ movie.voteAverage }}</div>
+                </div>
+                <div class="flexDisplay">
+                    <mat-label class="labelContent">Vote count : </mat-label>
+                    <div class="content">{{ movie.voteCount }}</div>
+                </div>
+                <div class="flexDisplay">
+                    <mat-label class="labelContent">First air date : </mat-label>
+                    <div class="content">{{ movie.firstAirDate }}</div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
